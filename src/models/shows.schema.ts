@@ -9,6 +9,6 @@ export const ShowsSchema = new mongoose.Schema({
     role: { type: String }
     },
   ],
-  runtime: { type: Number },
-  genres: [{ type: String }]
+  runtime: { type: Number, required: true  },
+  genres: { type: String , required: true }
 });

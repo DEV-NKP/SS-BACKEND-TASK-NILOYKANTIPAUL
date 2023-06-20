@@ -5,5 +5,5 @@ export interface Shows extends Document {
     actors: string[];
     crew: { name: string; role: string }[];
     runtime: number;
-    genres: string[];
+    genres: string;
   }
