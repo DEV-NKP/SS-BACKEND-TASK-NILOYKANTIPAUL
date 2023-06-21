@@ -20,20 +20,26 @@ check the setup.txt file for more information
 ----------------
 |How to run:|
 ----------------
--> open cmd and run
+>> open cmd and run
 npm run start:dev
--> Or, simply double press/hit enter on the START.bat file
+
+>> Or, simply double press/hit enter on the START.bat file
 
 
 ----------------
 |Project Features:|
 ----------------
--> Only Admin can add new shows.
--> shows have 2 different type/genre.
--> User can view tv shows/movies details.
--> authorization and authentication are added with cookies.
--> User's password will be hashed before saving in database.
--> username must be unique.
+>> Only Admin can add new shows.
+
+>> shows have 2 different type/genre.
+
+>> User can view tv shows/movies details.
+
+>> authorization and authentication are added with cookies.
+
+>> User's password will be hashed before saving in database.
+
+>> username must be unique.
 
 
 ----------------
@@ -52,12 +58,13 @@ npm run start:dev
 10. /shows/getoneshow/:id -> use for get only one Show's detail.
 
 ----------------------------------------------------------------
-Already created accounts:
+Already created accounts:<br/>
 Admin:
 {
     "uname":"Niloy1",
     "password":"1234"
 }
+<br/>
 User:
 {
     "uname":"Niloy0",
