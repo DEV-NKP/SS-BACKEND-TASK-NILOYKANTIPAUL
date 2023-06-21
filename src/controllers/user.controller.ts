@@ -41,7 +41,6 @@ export class UserController {
   }
 
   @Post('/login')
-  
   async Login(@Body() user: User, @Request() req): Promise<User | any> {
     const getuser= await this.userService.Login(user);
     if(getuser!=undefined)
@@ -56,4 +55,11 @@ export class UserController {
     }
   }
 
+   @Get('/logout')
+   logout(@Request() req)
+   {
+    req.res.clearCookie("uname");
+    req.res.clearCookie("post");
+    req.res.end()
+   }
 }
