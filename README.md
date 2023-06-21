@@ -15,7 +15,7 @@ API run by: Postman
 |How to setup:|
 ----------------
 check the setup.txt file for more information
-----------------------------------------------------------------
+
 
 ----------------
 |How to run:|
@@ -23,7 +23,7 @@ check the setup.txt file for more information
 -> open cmd and run
 npm run start:dev
 -> Or, simply double press/hit enter on the START.bat file
-----------------------------------------------------------------
+
 
 ----------------
 |Project Features:|
@@ -34,7 +34,7 @@ npm run start:dev
 -> authorization and authentication are added with cookies.
 -> User's password will be hashed before saving in database.
 -> username must be unique.
-----------------------------------------------------------------
+
 
 ----------------
 |Project routes:|
