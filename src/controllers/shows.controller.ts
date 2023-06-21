@@ -1,14 +1,13 @@
 import { Controller, Get, Param, Post, Body, UseGuards } from '@nestjs/common';
+import { AdminGuard } from 'src/middlewares/session.guard';
 import { Shows } from 'src/models/shows.model';
-
-//import { JwtAuthGuard } from '../middlewares/jwt-auth.guard';
 import { ShowsService } from 'src/services/shows.service';
 
 @Controller('shows')
 export class ShowsController {
   constructor(private showsService: ShowsService) {}
 
-  //@UseGuards(JwtAuthGuard)
+  @UseGuards(AdminGuard)
   @Post('/createshow')
   async create(@Body() show: Shows): Promise<Shows> {
     return this.showsService.CreateShows(show);
