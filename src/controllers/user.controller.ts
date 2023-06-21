@@ -47,7 +47,6 @@ export class UserController {
     {
       req.res.cookie('uname', getuser.uname);
       req.res.cookie('post', getuser.post);
-      //req.cookies['uname'];
       return getuser;
     }
     else{

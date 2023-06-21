@@ -16,7 +16,17 @@ export class ShowsService{
        FindAllShows(): Promise<Shows[]> {
         return this.showsModel.find().exec();
       }
-    
+
+      FindAllMovies(): Promise<Shows[]> {
+        const genres="Movie"
+        return this.showsModel.find({ genres }).exec();
+      }
+
+      FindAllTvShows(): Promise<Shows[]> {
+        const genres="TV Show"
+        return this.showsModel.find({ genres }).exec();
+      }
+      
        FindOneShow(id: string): Promise<Shows> {
         return this.showsModel.findById(id).exec();
       }

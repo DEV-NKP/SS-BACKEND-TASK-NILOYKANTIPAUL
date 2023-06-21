@@ -18,6 +18,16 @@ export class ShowsController {
     return this.showsService.FindAllShows();
   }
 
+  @Get('/getallmovies')
+    async findAllMovies(): Promise<Shows[]> {
+      return this.showsService.FindAllMovies();
+    }
+    
+  @Get('/getalltvshows')
+    async findAllTvShows(): Promise<Shows[]> {
+      return this.showsService.FindAllTvShows();
+    }
+    
   @Get('/getoneshow/:id')
   async findOne(@Param('id') id: string): Promise<Shows> {
     return this.showsService.FindOneShow(id);
