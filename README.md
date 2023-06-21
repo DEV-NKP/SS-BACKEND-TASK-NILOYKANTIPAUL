@@ -1,73 +1,57 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+The Show Viewer
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+It can helps to find tvshows and movies easily.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+This project is based on 2 users: Admin, User.
 
-## Description
+Project Framework: Nest JS
+Project Database: MongoDB
+API run by: Postman
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+How to setup:
+check the setup.txt file for more information
 
-## Installation
+How to run:
+-> open cmd and run
+npm run start:dev
+-> Or, simply double press/hit enter on the START.bat file
 
-```bash
-$ npm install
-```
+Project Features:
+-> Only Admin can add new shows.
+-> shows have 2 different type/genre.
+-> User can view tv shows/movies details.
+-> authorization and authentication are added with cookies.
+-> User's password will be hashed before saving in database.
+-> username must be unique.
 
-## Running the app
+Project routes:
+1. /user/signup -> use for creating new user account.
+2. /user/createadmin -> use for creating new admin account (Only admin can access this route).
+3. /user/getallusers -> use for get all user's informations(Only admin can access this route).
+4. /user/login -> use for logged in user.
+5. /user/logout -> use for logged out user.
 
-```bash
-# development
-$ npm run start
+6. /shows/createshow -> use for creating new show (Only admin can access this route).
+7. /shows/getallshows -> use for get all show's details.
+8. /shows/getallmovies -> use for get all Movie's details.
+9. /shows/getalltvshows -> use for get all TV Show's details.
+10. /shows/getoneshow/:id -> use for get only one Show's detail.
 
-# watch mode
-$ npm run start:dev
+Already created accounts:
+Admin:
+{
+    "uname":"Niloy1",
+    "password":"1234"
+}
+User:
+{
+    "uname":"Niloy0",
+    "password":"1234"
+}
 
-# production mode
-$ npm run start:prod
-```
 
-## Test
+ALL RIGHTS RESERVED BY ©️ NILOY KANTI PAUL (DEV-NKP)
 
-```bash
-# unit tests
-$ npm run test
 
-# e2e tests
-$ npm run test:e2e
 
-# test coverage
-$ npm run test:cov
-```
 
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
