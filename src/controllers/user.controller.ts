@@ -1,4 +1,4 @@
-import { Controller, Get, Param, Post, Body, UseGuards } from '@nestjs/common';
+import { Controller, Get, Param, Post, Body, UseGuards,Request } from '@nestjs/common';
 import { User } from 'src/models/user.model';
 import { UserService } from 'src/services/user.service';
 
@@ -24,5 +24,17 @@ export class UserController {
     return this.userService.FindAllUsers();
   }
 
+  @Post('/login')
+  async Login(@Body() user: User, @Request() req): Promise<User | any> {
+    const getuser= await this.userService.Login(user);
+    if(getuser!=undefined)
+    {
+      req.res.cookie('uname', getuser.uname);
+      return getuser;
+    }
+    else{
+      return "Invalid Username or Password"
+    }
+  }
 
 }
